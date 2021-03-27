@@ -1,0 +1,3 @@
+Package: *
+Pin: origin "download.gluster.org"
+Pin-Priority: 999
