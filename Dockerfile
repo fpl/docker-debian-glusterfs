@@ -13,7 +13,7 @@ RUN true \
 RUN true \
     && mkdir -p /var/lib/glusterd_bkp /etc/glusterfs_bkp \
 	&& cp -far /etc/glusterfs/* /etc/glusterfs_bkp/. \
-    && cp -far /var/lib/glusterd/* /etc/glusterfs_bkp/. 
+    && cp -far /var/lib/glusterd/* /var/lib/glusterd_bkp/. 
 RUN mkdir /brick1
 RUN mkdir /brick2
 RUN mkdir /brick3
