@@ -20,6 +20,7 @@ RUN mkdir /brick3
 
 EXPOSE 24009/udp 24007/tcp
 VOLUME ["/brick1", "/brick2", "/brick3"]
+VOLUME ["/etc/glusterfs", "/var/lib/glusterd", "/var/log/glusterfs"]
 
 CMD ["/start.sh"]
 
