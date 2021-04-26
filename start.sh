@@ -13,5 +13,6 @@ do
 done
 
 /usr/sbin/glustereventsd --pid-file /run/glustereventsd.pid &
+/usr/sbin/cron &
 /usr/sbin/glusterd --log-level=$GLUSTERD_LOG_LEVEL --log-file=$GLUSTERD_LOG_FILE $GLUSTERD_OPTIONS
 sleep infinity

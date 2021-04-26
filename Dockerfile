@@ -9,6 +9,7 @@ RUN true \
     && apt-get update \
 	&& apt-get --yes upgrade \
 	&& apt-get install --no-install-recommends --yes glusterfs-server \
+	&& apt-get install --no-install-recommends --yes cron logrotate \
 	&& apt-get clean
 RUN true \
     && mkdir -p /var/lib/glusterd_bkp /etc/glusterfs_bkp \
