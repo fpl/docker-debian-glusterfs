@@ -2,9 +2,6 @@ FROM debian:stable-slim
 
 ADD start.sh /
 RUN chmod a+x /start.sh
-ADD glusterfs-bpo.list /etc/apt/sources.list.d/
-RUN mkdir /debs
-ADD debs/* /debs/
 RUN true \
     && apt-get update \
 	&& apt-get --yes upgrade \
