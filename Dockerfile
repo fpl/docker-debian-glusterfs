@@ -12,12 +12,13 @@ RUN true \
     && mkdir -p /var/lib/glusterd_bkp /etc/glusterfs_bkp \
 	&& cp -far /etc/glusterfs/* /etc/glusterfs_bkp/. \
     && cp -far /var/lib/glusterd/* /var/lib/glusterd_bkp/. 
-RUN mkdir /brick1 /brick2 /brick3 /brick4 /brick5 /brick6
+RUN true \
+    && mkdir /brick1 /brick2 /brick3 /brick4 /brick5 /brick6 \
+       /brick7 /brick8 /brick9 /brick10 /brick11 /brick12
 
 EXPOSE 24009/udp 24007/tcp
-VOLUME ["/brick1", "/brick2", "/brick3","/brick4", "/brick5", "/brick6"]
+VOLUME ["/brick1", "/brick2", "/brick3","/brick4", "/brick5", "/brick6", "/brick7", "/brick8", "/brick9", "/brick10", "/brick11", "/brick12"]
 VOLUME ["/etc/glusterfs", "/var/lib/glusterd", "/var/log/glusterfs"]
 
 CMD ["/start.sh"]
-
 
