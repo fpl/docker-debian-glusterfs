@@ -1,10 +1,11 @@
-FROM debian:stable-slim
+FROM debian:bookworm-slim
 
 ADD start.sh /
 RUN chmod a+x /start.sh
 RUN true \
     && apt-get update \
 	&& apt-get --yes upgrade \
+    && apt-get install --no-install-recommends --yes procps iproute2 less nvi \
 	&& apt-get install --no-install-recommends --yes glusterfs-server \
 	&& apt-get install --no-install-recommends --yes cron logrotate \
 	&& apt-get clean
